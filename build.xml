@@ -70,4 +70,41 @@
     nbproject/build-impl.xml file. 
 
     -->
+
+    <!-- Target to stop and restart the server -->
+    <!-- Target to stop and restart the server -->
+    <target name="restart-server">
+        <echo message="Stopping the server..." />
+        <exec executable="cmd" failonerror="false">
+            <arg value="/c" />
+            <arg value="taskkill" />
+            <arg value="/f" />
+            <arg value="/im" />
+            <arg value="server64.exe" />
+        </exec>
+        <echo message="Waiting for 5 seconds..." />
+        <exec executable="cmd">
+            <arg value="/c" />
+            <arg value="ping" />
+            <arg value="localhost" />
+            <arg value="-n" />
+            <arg value="6" /> <!-- 5 seconds + 1 -->
+            <arg value="-w" />
+            <arg value="1000" />
+            <arg value=">nul" />
+        </exec>
+        <echo message="Starting the server..." />
+        <exec executable="cmd">
+            <arg value="/c" />
+            <arg value="start" />
+            <arg value="&quot;&quot;" />
+            <arg value="D:\Re-Flex\server64.exe" />
+        </exec>
+        <echo message="Server restarted successfully." />
+    </target>
+
+    <!-- Ensure the restart-server target runs after the JAR is built -->
+    <target name="-post-jar" depends="restart-server">
+        <echo message="Server restart completed after JAR build." />
+    </target>
 </project>

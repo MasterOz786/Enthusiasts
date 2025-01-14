@@ -14,9 +14,4 @@ public class AdminCommands implements CommandController {
         //check for player level here!
         return true;
     }
-
-   
-
-   
-
 }
