@@ -1,0 +1,4 @@
+1736857303353:  INFO - (VcmpPluginInit) VC:MP Java integration plugin loading...
+1736857303353: ERROR - (Platform::LoadModule) Loading module C:\Program Files\Java\jre1.8\bin\server\jvm.dll #specify the path to jvm.dll (on windows) or libjvm.so (on linux) failed with error: 126
+1736857303353: ERROR - (JavaCore::Initialise) Loading JVM library functions failed.
+1736857303353: ERROR - (JavaEventProxy::StartVM) JavaCore initialisation failed.

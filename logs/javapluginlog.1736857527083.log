@@ -1,0 +1,16 @@
+1736857527083:  INFO - (VcmpPluginInit) VC:MP Java integration plugin loading...
+1736857527090:  INFO - (JavaCore::LoadLibraryFunctions) Java VM library loaded.
+1736857527090:  INFO - (JavaCore::LoadLibraryFunctions) Java VM library functions loaded.
+1736857527090:  INFO - (JavaCore::SetupJVMArguments) Java VM settings initialized.
+1736857527155:  INFO - (JavaCore::CreateJVM) Java VM created.
+1736857527155:  INFO - (JavaCore::AttachThreadToJVM) Server thread attached to VM.
+1736857527159: ERROR - (JavaExceptionHandler::Initialise) Exception in Java code
+java.lang.NoClassDefFoundError: com/maxorator/vcmp/java/plugin/exceptions/DeadEntityException
+Caused by: java.lang.ClassNotFoundException: com.maxorator.vcmp.java.plugin.exceptions.DeadEntityException
+    java.net.URLClassLoader.findClass(Unknown Source)
+    java.lang.ClassLoader.loadClass(Unknown Source)
+    sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+    java.lang.ClassLoader.loadClass(Unknown Source)
+1736857527159: ERROR - (JavaExceptionHandler::Initialise) Exception classes not found (ThreadSafetyException, DeadEntityException, NullPointerException).
+1736857527159: ERROR - (JavaCore::Initialise) Setting up exception handler failed.
+1736857527159: ERROR - (JavaEventProxy::StartVM) JavaCore initialisation failed.
